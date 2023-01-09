@@ -1,38 +1,41 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+/* GLOBAL  */
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1260px;
+}
+
+body {
+  font-family: 'Creepster', cursive;
+  font-size: 125%;
+  background-color: black;
+  color: red;
+}
+
+/* HEADER */
+header {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header span {
+  display: block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  font-size: 4rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/* a {
+  display: inline-block;
+  border: 5px red solid;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 50px;
+} */
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.indexHeader {
+  height: 100vh;
+  padding-top: 100px;
 }
