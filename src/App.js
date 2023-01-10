@@ -2,14 +2,16 @@ import './App.css';
 import Header from './Header.js';
 import Roulette from './Roulette.js';
 import Form from './Form.js';
+import { Link, Routes, Route } from 'react-router-dom';
 
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Roulette />
-      <Form />
+      <Routes>
+        <Route path="/" element={<Header />} />
+        <Route path="/roulette" element={<Roulette />} />
+      </Routes>
     </div>
   );
 }

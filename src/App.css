@@ -263,6 +263,14 @@ html {
   max-width: 1260px;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: red;
+}
+
 body {
   font-family: 'Creepster', cursive;
   font-size: 125%;
@@ -280,7 +288,7 @@ header span {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 6rem;
 }
 
 /* a {
@@ -294,4 +302,74 @@ h1 {
 .indexHeader {
   height: 100vh;
   padding-top: 100px;
+}
+
+/* FORM */
+.chooseMovie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.chooseMovie ul {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.chooseMovie p {
+  width: 50%;
+  margin: 10px auto;
+}
+
+.chooseMovie img {
+  width: 250px;
+  margin: 10px auto;
+}
+
+
+select {
+  border: none;
+  font-family: 'Creepster', cursive;
+  background: black;
+  color: red;
+  margin-bottom: 15px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+button {
+  border: 5px red solid;
+  color: red;
+  padding: 10px;
+  cursor: pointer;
+  width: 160px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: 'Creepster', cursive;
+  background-color: black;
+}
+
+.button {
+  border: 5px red solid;
+  color: red;
+  padding: 10px;
+  cursor: pointer;
+  width: 160px;
+  margin: 50px auto;
+}
+
+.escape {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  margin-top: 0;
+  border: 5px red solid;
+  padding: 10px;
 }

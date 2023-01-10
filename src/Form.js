@@ -2,7 +2,7 @@ function Form() {
     return (
         <div className="chooseMovie">
             <form>
-                <div class="dropdown">
+                <div className="dropdown">
                     <label htmlFor="year" className="sr-only">Choose a year</label>
                     <select id="year" name="year" required>
                         <option value="" disabled selected>Choose a Year</option>
@@ -52,7 +52,7 @@ function Form() {
                         <option value="2023">2023</option>
                     </select>
                 </div>
-                <div className="button">
+                <div className="buttons">
                     <button className="giveMovie" type="submit">Give me a movie</button>
                 </div>
             </form>

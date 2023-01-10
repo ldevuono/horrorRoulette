@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom';
+
 function Header() {
     return (
         <header className="indexHeader">
             <h1 className="wrapper">Welcome to... <span>Horror Roulette</span></h1>
-            {/* <a href="roulette.html">Enter if you dare</a> */}
-        </header>
+            <Link to="/roulette"> <p className="button">Enter if you dare</p></Link>
+        </header >
     );
 }
 
