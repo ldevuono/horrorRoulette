@@ -1,11 +1,17 @@
-function Form() {
+function Form(props) {
     return (
         <div className="chooseMovie">
-            <form>
+            <form
+                onSubmit={props.submitHandler}>
                 <div className="dropdown">
                     <label htmlFor="year" className="sr-only">Choose a year</label>
-                    <select id="year" name="year" required>
-                        <option value="" disabled selected>Choose a Year</option>
+                    <select id="year"
+                        name="year"
+                        defaultValue={""}
+                        required={true}
+                        onChange={props.handleChange}
+                    >
+                        <option value="" disabled >Choose a Year</option>
                         <option value="1980">1980</option>
                         <option value="1981">1981</option>
                         <option value="1982">1982</option>
