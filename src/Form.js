@@ -1,6 +1,6 @@
 function Form(props) {
     return (
-        <div className="chooseMovie">
+        <div className="chooseMovie wrapper">
             <form
                 onSubmit={props.submitHandler}>
                 <div className="dropdown">

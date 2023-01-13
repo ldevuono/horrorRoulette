@@ -1,8 +1,10 @@
 function MovieBox(props) {
-    console.log(props)
     return (
-        <div>
-            {/* <h3>{props.RandomMovie} </h3> */}
+        <div className="chooseMovie">
+            <h2>{props.title} </h2>
+            <p>{props.desc}</p>
+            <img src={`https://image.tmdb.org/t/p/w500${props.path}`}
+                alt={props.title} />
         </div>
     );
 }

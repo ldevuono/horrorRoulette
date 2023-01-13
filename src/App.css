@@ -291,14 +291,6 @@ h1 {
   font-size: 6rem;
 }
 
-/* a {
-  display: inline-block;
-  border: 5px red solid;
-  padding: 10px;
-  cursor: pointer;
-  margin-top: 50px;
-} */
-
 .indexHeader {
   height: 100vh;
   padding-top: 100px;
@@ -312,11 +304,6 @@ h1 {
   align-items: center;
 }
 
-.chooseMovie ul {
-  text-align: center;
-  margin: 50px auto;
-}
-
 .chooseMovie p {
   width: 50%;
   margin: 10px auto;
@@ -326,7 +313,6 @@ h1 {
   width: 250px;
   margin: 10px auto;
 }
-
 
 select {
   border: none;
@@ -341,7 +327,7 @@ select {
 form {
   display: flex;
   flex-direction: column;
-  align-items: center
+  align-items: center;
 }
 
 button {
@@ -350,7 +336,6 @@ button {
   padding: 10px;
   cursor: pointer;
   width: 160px;
-  text-align: center;
   margin-bottom: 10px;
   font-family: 'Creepster', cursive;
   background-color: black;
@@ -372,4 +357,50 @@ button {
   margin-top: 0;
   border: 5px red solid;
   padding: 10px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width:800px) {
+  h1.rouletteHeader {
+    font-size: 3.5rem;
+    padding-top: 70px;
+  }
+}
+
+@media (max-width:600px) {
+  header h1 {
+
+    font-size: 3.2rem;
+  }
+
+  header span {
+    font-size: 4.5rem;
+  }
+
+
+  h1.rouletteHeader {
+    font-size: 2.5rem;
+  }
+
+
+  .chooseMovie p {
+    width: 80%;
+  }
+}
+
+@media (max-width:450px) {
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  header span {
+    font-size: 3.2rem;
+  }
+
+  h1.rouletteHeader {
+    font-size: 1.9rem;
+    padding: auto 0;
+  }
 }
