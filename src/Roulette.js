@@ -8,10 +8,6 @@ function Roulette() {
     //create state to hold user input when they choose a year
     const [year, setYear] = useState(0);
     const [randomMovie, setRandomMovie] = useState({});
-    const [title, setTitle] = useState("");
-    const [desc, setDesc] = useState("");
-    const [path, setPath] = useState("/uv5q7KtaUs6LeHPcC1eWJO5N8uI.jpg")
-
 
     //listen for date choice
     const handleChange = (e) => {
@@ -41,12 +37,10 @@ function Roulette() {
         })
             .then((res) => {
                 setRandomMovie(res.data.results[Math.floor(Math.random() * res.data.results.length)]);
-                setTitle(randomMovie.title);
-                setDesc(randomMovie.overview);
-                setPath(randomMovie.poster_path);
             })
     }
-    console.log(randomMovie)
+
+    // console.log(year)
 
     return (
         <header className="indexHeader">
@@ -58,9 +52,6 @@ function Roulette() {
             />
             <MovieBox
                 randomMovie={randomMovie}
-                title={title}
-                desc={desc}
-                path={path}
             />
             <Link to="/"><p className="escape">Escape</p></Link>
         </header>
