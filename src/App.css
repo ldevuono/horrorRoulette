@@ -350,6 +350,14 @@ button {
   margin: 50px auto;
 }
 
+.watchList {
+  background-color: red;
+  color: black;
+  font-size: 1.1rem;
+  padding: 5px;
+
+}
+
 .escape {
   position: absolute;
   top: 15px;
@@ -357,6 +365,15 @@ button {
   margin-top: 0;
   border: 5px red solid;
   padding: 10px;
+}
+
+.button:hover,
+.button:focus,
+button:hover,
+button:focus,
+.escape:hover,
+.escape:focus {
+  box-shadow: 0 0 30px 10px red;
 }
 
 /* MEDIA QUERIES */
