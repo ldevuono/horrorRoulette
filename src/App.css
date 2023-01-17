@@ -358,13 +358,22 @@ button {
 
 }
 
-.escape {
+.escape,
+.goToWatchList {
   position: absolute;
   top: 15px;
-  left: 15px;
   margin-top: 0;
   border: 5px red solid;
   padding: 10px;
+}
+
+.escape {
+  left: 15px;
+}
+
+.goToWatchList {
+  right: 15px;
+
 }
 
 .button:hover,
@@ -372,9 +381,13 @@ button {
 button:hover,
 button:focus,
 .escape:hover,
-.escape:focus {
+.escape:focus,
+.goToWatchList:focus,
+.goToWatchList:hover {
   box-shadow: 0 0 30px 10px red;
 }
+
+
 
 /* MEDIA QUERIES */
 

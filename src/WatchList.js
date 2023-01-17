@@ -1,11 +1,14 @@
+import { Link } from 'react-router-dom';
+
+
 function WatchList(props) {
     return (
         <div>
             {props.savedMovie.map((movie) => {
                 return (
-                    <div key={movie.key}>
+                    <div className="chooseMovie" key={movie.key}>
                         <h2>{movie.title}</h2>
-                        <h3>{movie.overview}</h3>
+                        <p>{movie.overview}</p>
                         <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                             alt={`poster for ${movie.title}`}
                         />
@@ -13,6 +16,8 @@ function WatchList(props) {
                 )
             })
             }
+            <Link to="/roulette"><p className="escape">Escape</p></Link>
+
         </div>
 
     );
