@@ -365,6 +365,7 @@ button {
 .watchListBox {
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 15px;
 }
 
 .watchListh1 {
