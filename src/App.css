@@ -401,6 +401,11 @@ button {
   color: red;
 }
 
+.escape:visited,
+.goToWatchList:visited {
+  color: red;
+}
+
 .escape {
   left: 15px;
 }
