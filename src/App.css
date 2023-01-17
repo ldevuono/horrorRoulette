@@ -456,6 +456,15 @@ button:focus,
   .chooseMovie p {
     width: 80%;
   }
+
+  .watchListBox {
+    flex-direction: column;
+  }
+
+  .watchListBox ul {
+    width: 90%;
+    margin: 5px auto;
+  }
 }
 
 @media (max-width:450px) {
