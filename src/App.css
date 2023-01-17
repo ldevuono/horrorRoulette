@@ -365,7 +365,10 @@ button {
 .watchListBox {
   display: flex;
   flex-wrap: wrap;
-  padding: 100px;
+}
+
+.watchListh1 {
+  text-align: center;
 }
 
 .watchListBox img {

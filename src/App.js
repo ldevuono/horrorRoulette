@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import WatchList from './WatchList.js';
 import firebase from './firebase';
-import { getDatabase, ref, onValue, push } from 'firebase/database';
+import { getDatabase, ref, onValue, push, remove } from 'firebase/database';
 
 
 function App() {
@@ -58,11 +58,11 @@ function App() {
       const newState = [];
       // storing the response from our query to Firebase inside a variable, using firebase's .val() method to parse our database the way we want it:
       const data = response.val();
-      // data is an object, so we iterate through it using a for in loop to access each book name 
+      // data is an object, so we iterate through it using a for in loop to access each movie name 
 
       for (let key in data) {
-        // inside the loop, we push each book name to an array we already created inside the onValue() function called newState
-        newState.push(data[key]);
+        // inside the loop, we push each movie name to an array we already created inside the onValue() function called newState
+        newState.push({ key: key, name: data[key] });
       }
       //then call setSavedMovie in order to update state with local array newState
       setSavedMovie(newState);
@@ -76,14 +76,23 @@ function App() {
     const dbRef = ref(database);
 
     push(dbRef, randomMovie);
-    alert("Movie added to watch list");
   }
+
+  // function to remove poem from library
+  const removeMovie = (movieId) => {
+    // referencing database again, this time specifically the node of the poem we want to remove:
+    const database = getDatabase(firebase);
+    const dbRef = ref(database, `/${movieId}`);
+
+    remove(dbRef);
+  }
+
   return (
     <div>
       <Routes>
         <Route path="/" element={<Header />} />
-        <Route path="/roulette" element={
-          <Roulette
+        <Route path="/roulette" element=
+          {<Roulette
             randomMovie={randomMovie}
             saveMovie={saveMovie}
             handleChange={handleChange}
@@ -91,7 +100,12 @@ function App() {
             submitHandler={submitHandler}
           />}
         />
-        <Route path="/roulette/watchlist" element={<WatchList savedMovie={savedMovie} />} />
+        <Route path="/roulette/watchlist" element=
+          {<WatchList
+            removeMovie={removeMovie}
+            savedMovie={savedMovie}
+          />}
+        />
       </Routes>
     </div>
   );
