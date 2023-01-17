@@ -1,10 +1,10 @@
 import './App.css';
-import Header from './Header.js';
-import Roulette from './Roulette.js';
+import Header from './components/Header.js';
+import Roulette from './components/Roulette.js';
 import { Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import WatchList from './WatchList.js';
+import WatchList from './components/WatchList.js';
 import firebase from './firebase';
 import { getDatabase, ref, onValue, push, remove } from 'firebase/database';
 
