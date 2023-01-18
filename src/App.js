@@ -7,7 +7,7 @@ import axios from 'axios';
 import WatchList from './components/WatchList.js';
 import firebase from './firebase';
 import { getDatabase, ref, onValue, push, remove } from 'firebase/database';
-
+import Swal from "sweetalert2";
 
 function App() {
   //create state to hold user input when they choose a year
@@ -76,6 +76,11 @@ function App() {
     const dbRef = ref(database);
 
     push(dbRef, randomMovie);
+    Swal.fire({
+      confirmButtonColor: "#000000",
+      color: "#000000",
+      title: 'Saved to watch list'
+    })
   }
 
   // function to remove poem from library
@@ -107,6 +112,7 @@ function App() {
           />}
         />
       </Routes>
+
     </div>
   );
 }
