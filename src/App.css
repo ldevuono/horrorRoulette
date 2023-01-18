@@ -387,7 +387,7 @@ button {
   text-align: center;
 }
 
-.watchListBox p {
+.watchListBox p:not(.escape) {
   font-size: 1.1rem;
 }
 
