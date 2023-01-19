@@ -79,7 +79,7 @@ function App() {
     Swal.fire({
       confirmButtonColor: "#000000",
       color: "#000000",
-      title: 'Saved to watch list'
+      title: 'Saved'
     })
   }
 

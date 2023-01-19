@@ -316,6 +316,9 @@ h1 {
 .chooseMovie img {
   width: 250px;
   margin: 10px auto;
+}
+
+.movieBox {
   padding-bottom: 30px;
 }
 

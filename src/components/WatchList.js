@@ -10,10 +10,10 @@ function WatchList(props) {
                     return (
                         <ul key={movie.key}>
                             <li><h2>{movie.name.title}</h2></li>
-                            <li><p>{movie.name.overview}</p></li>
                             <li className="img"><img src={`https://image.tmdb.org/t/p/w500${movie.name.poster_path}`}
                                 alt={`poster for ${movie.name.title}`}
                             /></li>
+                            <li><p>{movie.name.overview}</p></li>
                             <li><button onClick={() => { props.removeMovie(movie.key) }}>Remove</button></li>
                         </ul>
                     )
