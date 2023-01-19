@@ -291,8 +291,13 @@ header span {
   display: block;
 }
 
+h1.rouletteHeader {
+  font-size: 4rem;
+}
+
 h1 {
   font-size: 6rem;
+  transition: .3s ease;
 }
 
 .indexHeader {
@@ -388,6 +393,16 @@ button {
   align-items: center;
   margin: 5px;
   text-align: center;
+  position: relative;
+}
+
+.remove {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 50px;
+  padding: 2px;
+  border: 1px solid red;
 }
 
 .watchListBox p:not(.escape) {
@@ -432,11 +447,15 @@ button:focus,
 
 
 /* MEDIA QUERIES */
+@media (max-width:950px) {
+  .watchListBox ul {
+    width: calc((100% / 2) - 10px);
+  }
+}
 
 @media (max-width:800px) {
   h1.rouletteHeader {
-    font-size: 3.5rem;
-    padding-top: 70px;
+    padding-top: 20px;
   }
 }
 
@@ -446,15 +465,20 @@ button:focus,
     font-size: 3.2rem;
   }
 
+
   header span {
     font-size: 4.5rem;
   }
 
 
+  .watchListh1,
   h1.rouletteHeader {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
+  .watchListh1 {
+    padding-top: 50px;
+  }
 
   .chooseMovie p {
     width: 80%;

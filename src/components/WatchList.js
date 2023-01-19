@@ -14,14 +14,13 @@ function WatchList(props) {
                                 alt={`poster for ${movie.name.title}`}
                             /></li>
                             <li><p>{movie.name.overview}</p></li>
-                            <li><button onClick={() => { props.removeMovie(movie.key) }}>Remove</button></li>
+                            <li><button className="remove" onClick={() => { props.removeMovie(movie.key) }}>X</button></li>
                         </ul>
                     )
                 })
                 }
-                <Link to="/roulette"><p className="escape">Escape</p></Link>
-
             </div>
+            <Link to="/roulette"><p className="escape">Escape</p></Link>
         </div>
     );
 }
