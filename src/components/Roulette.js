@@ -6,7 +6,7 @@ function Roulette(props) {
 
     return (
         <header className="rouletteHeader">
-            <h1 className="wrapper">It's time to decide</h1>
+            <h1 className="wrapper rouletteHeader">It's time to decide</h1>
 
             <Link to="/roulette/watchlist"> <p className="goToWatchList">Watch List</p>
             </Link>
