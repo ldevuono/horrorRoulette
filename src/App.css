@@ -285,13 +285,15 @@ body {
 /* HEADER */
 header {
   text-align: center;
+  height: 100vh;
+  padding-top: 100px;
 }
 
 header span {
   display: block;
 }
 
-h1.rouletteHeader {
+.rouletteHeader h1 {
   font-size: 4rem;
 }
 
@@ -301,8 +303,9 @@ h1 {
 }
 
 .indexHeader {
-  height: 100vh;
-  padding-top: 100px;
+  background-image: url(./assets/vhs.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* FORM */

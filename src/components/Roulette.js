@@ -5,8 +5,8 @@ import MovieBox from './MovieBox.js';
 function Roulette(props) {
 
     return (
-        <header className="indexHeader">
-            <h1 className="wrapper rouletteHeader">It's time to decide</h1>
+        <header className="rouletteHeader">
+            <h1 className="wrapper">It's time to decide</h1>
 
             <Link to="/roulette/watchlist"> <p className="goToWatchList">Watch List</p>
             </Link>
