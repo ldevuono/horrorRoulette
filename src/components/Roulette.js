@@ -19,6 +19,7 @@ function Roulette(props) {
             <MovieBox
                 randomMovie={props.randomMovie}
                 saveMovie={props.saveMovie}
+                load={props.load}
             />
             <Link to="/"><p className="escape">Escape</p></Link>
         </header>

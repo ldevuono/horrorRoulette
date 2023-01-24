@@ -9,11 +9,13 @@ import firebase from './firebase';
 import { getDatabase, ref, onValue, push, remove } from 'firebase/database';
 import Swal from "sweetalert2";
 
+
 function App() {
   //create state to hold user input when they choose a year
   const [year, setYear] = useState(0);
   const [randomMovie, setRandomMovie] = useState({});
   const [savedMovie, setSavedMovie] = useState([]);
+  const [load, setLoad] = useState(false);
 
   //listen for date choice
   const handleChange = (e) => {
@@ -27,6 +29,7 @@ function App() {
 
   const submitHandler = (e) => {
     chooseYear(e, year)
+    setLoad(true);
 
     //API CALL
     //api key
@@ -42,6 +45,7 @@ function App() {
       },
     })
       .then((res) => {
+        setLoad(false);
         setRandomMovie(res.data.results[Math.floor(Math.random() * res.data.results.length)]);
       })
   };
@@ -103,6 +107,7 @@ function App() {
             handleChange={handleChange}
             chooseYear={chooseYear}
             submitHandler={submitHandler}
+            load={load}
           />}
         />
         <Route path="/roulette/watchlist" element=
@@ -112,7 +117,6 @@ function App() {
           />}
         />
       </Routes>
-
     </div>
   );
 }
