@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 /* setup */
 html {
@@ -271,6 +272,11 @@ ul {
   list-style: none;
 }
 
+p {
+  font-family: 'Roboto Mono',
+    monospace;
+}
+
 a:visited {
   color: red;
 }
@@ -293,13 +299,14 @@ header span {
   display: block;
 }
 
-h1.rouletteHeader,
+
 .rouletteHeader h1 {
   font-size: 4rem;
+
 }
 
 h1 {
-  font-size: 6rem;
+  font-size: 5rem;
   transition: .3s ease;
 }
 
@@ -307,6 +314,11 @@ h1 {
   height: 100vh;
   padding-top: 100px;
 }
+
+.dice {
+  width: 40%;
+}
+
 
 /* FORM */
 .chooseMovie {
@@ -333,7 +345,7 @@ h1 {
 select {
   border: none;
   font-family: 'Creepster', cursive;
-  background: black;
+  background: none;
   color: red;
   margin-bottom: 15px;
   margin-top: 50px;

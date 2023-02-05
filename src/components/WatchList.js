@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 
-
 function WatchList(props) {
     return (
         <div>
