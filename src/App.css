@@ -365,7 +365,8 @@ form {
   align-items: center;
 }
 
-button {
+button,
+.button {
   border: 5px red solid;
   color: red;
   padding: 10px;
@@ -374,14 +375,11 @@ button {
   margin-bottom: 10px;
   font-family: 'VT323', monospace;
   background-color: black;
+  box-shadow: 3px 3px 3px rgb(67, 62, 62);
+  transition: .1s ease;
 }
 
 .button {
-  border: 5px red solid;
-  color: red;
-  padding: 10px;
-  cursor: pointer;
-  width: 160px;
   margin: 50px auto;
 }
 
@@ -439,6 +437,8 @@ button {
   border: 5px red solid;
   padding: 10px;
   color: red;
+  box-shadow: 3px 3px 3px rgb(67, 62, 62);
+  transition: .1s ease;
 }
 
 .escape:visited,
@@ -462,7 +462,8 @@ button:focus,
 .escape:focus,
 .goToWatchList:focus,
 .goToWatchList:hover {
-  box-shadow: 0 0 30px 10px red;
+  box-shadow: none;
+  transform: translate(3px, 3px);
 }
 
 /* MEDIA QUERIES */
