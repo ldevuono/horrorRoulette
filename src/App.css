@@ -376,7 +376,7 @@ button,
   font-family: 'VT323', monospace;
   background-color: black;
   box-shadow: 3px 3px 3px rgb(67, 62, 62);
-  transition: .1s ease;
+  transition: .1s ease-in-out;
 }
 
 .button {
@@ -439,7 +439,7 @@ button,
   padding: 10px;
   color: red;
   box-shadow: 3px 3px 3px rgb(67, 62, 62);
-  transition: .1s ease;
+  transition: .1s ease-in-out;
 }
 
 .escape:visited,
