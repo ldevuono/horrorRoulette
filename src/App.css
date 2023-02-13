@@ -375,8 +375,11 @@ button,
   margin-bottom: 10px;
   font-family: 'VT323', monospace;
   background-color: black;
-  box-shadow: 3px 3px 3px rgb(67, 62, 62);
   transition: .1s ease-in-out;
+}
+
+.giveMovie {
+  margin-top: 10px;
 }
 
 .button {
@@ -389,6 +392,7 @@ button,
   color: black;
   font-size: 1.1rem;
   padding: 5px;
+  margin-top: 10px;
 }
 
 .watchListBox {
@@ -438,7 +442,6 @@ button,
   border: 5px red solid;
   padding: 10px;
   color: red;
-  box-shadow: 3px 3px 3px rgb(67, 62, 62);
   transition: .1s ease-in-out;
 }
 
@@ -461,10 +464,17 @@ button:hover,
 button:focus,
 .escape:hover,
 .escape:focus,
-.goToWatchList:focus,
-.goToWatchList:hover {
+.goToWatchList:hover,
+.goToWatchList:focus {
+  box-shadow: 0 0 30px 10px red;
+}
+
+.button:active,
+button:active,
+.escape:active,
+.goToWatchList:active {
   box-shadow: none;
-  transform: translate(3px, 3px);
+  transform: translateY(5px);
 }
 
 /* MEDIA QUERIES */
