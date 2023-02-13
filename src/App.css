@@ -381,6 +381,7 @@ button,
 
 .button {
   margin: 50px auto;
+  display: inline-block;
 }
 
 .watchList {
