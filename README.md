@@ -11,6 +11,6 @@ A horror movie randomizer created in React, powered by The Movie Database API. F
 - API call using axios  
 - React Router 
 
-## Live Link
+# Live Link
 
 https://horrorroulette.netlify.app/ 
